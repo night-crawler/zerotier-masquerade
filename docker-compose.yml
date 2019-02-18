@@ -1,0 +1,34 @@
+version: '3.4'
+
+networks:
+  default:
+  apt-network:
+    external: true
+  build-network:
+    external: true
+  devpi-network:
+    external: true
+  nginx-network:
+    external: true
+  test-db-network:
+    external: true
+
+volumes:
+  zerotier_var:
+
+services:
+  zerotier:
+    image: night-crawler/zerotier-masquerade:latest
+    devices:
+      - /dev/net/tun
+    networks:
+     - apt-network
+     - build-network
+     - devpi-network
+     - nginx-network
+     - test-db-network
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    volumes:
+      - zerotier_var:/var/lib/zerotier-one/
