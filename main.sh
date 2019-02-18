@@ -7,6 +7,6 @@ if [[ ! -e /dev/net/tun ]]; then
         exit 1
 fi
 
-exec /masquerade.sh
+sh /masquerade.sh
 
 exec /zerotier-one
