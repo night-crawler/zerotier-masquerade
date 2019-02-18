@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 docker build \
-    -t night-crawler/zerotier-masquerade \
+    -t ncrawler/zerotier-masquerade:latest \
     .

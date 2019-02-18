@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker push night-crawler/zerotier-masquerade:latest
+docker push ncrawler/zerotier-masquerade:latest

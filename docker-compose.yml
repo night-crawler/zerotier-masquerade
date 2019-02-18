@@ -18,7 +18,7 @@ volumes:
 
 services:
   zerotier:
-    image: night-crawler/zerotier-masquerade:latest
+    image: ncrawler/zerotier-masquerade:latest
     devices:
       - /dev/net/tun
     networks:
